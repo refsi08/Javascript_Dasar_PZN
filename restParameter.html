@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest parameter</title>
+</head>
+
+<body>
+
+    <h1>Rest Parameter:</h1>
+    <p> Rest Parameter menggunakan titik tiga (...)</p>
+
+    <script>
+
+        // rest parameter
+        function myData(name, ...array) {
+            let total = 0;
+            for (const item of array) {
+                total = total + item;
+            }
+            document.writeln(`<p> ${name} ${total} </p>`);
+        }
+
+        myData("Refsi", 5, 5, 5);
+        myData("Refsi", 2, 5, 5);
+        myData("Refsi", 5, 5, 5);
+
+        // rest parameter apabila data array nya sudah ada
+        const value = [2, 3, 4];
+        myData("Refsi", ...value); // tinggal panggil menggunakan titik tiga
+
+    </script>
+
+</body>
+
+</html>

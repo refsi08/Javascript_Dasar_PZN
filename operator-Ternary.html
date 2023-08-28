@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ternary Operator</title>
+</head>
+
+<body>
+
+    <h1>Ternary Operator</h1>
+
+    <!-- contoh kondisi menggunakan if -->
+    <script>
+        const nilai = 80;
+
+        if (nilai > 75) {
+            document.writeln(`Selamat Anda Lulus dengan nilai ${nilai}`);
+        } else {
+            document.writeln("Maaf anda tidak lulus");
+        }
+    </script>
+
+    <!-- contoh kondisi menggunakan Ternary Operator -->
+    <script>
+        const nilaiUjian = 80;
+        const result = (nilaiUjian > 75) ? `Selamat Anda Lulus dengan nilai ${nilaiUjian}` : `Maaf Anda tidak Lulus`;
+        document.writeln(`<p> ${result}</p>`);
+    </script>
+
+</body>
+
+</html>

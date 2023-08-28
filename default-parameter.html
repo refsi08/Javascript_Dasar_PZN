@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default Parameter</title>
+</head>
+
+<body>
+
+    <h1>Default Parameter :</h1>
+    <p>memberikan nilai default ke parameter</p>
+
+    <!-- Example -->
+    <script>
+        function defaultValue(name, age = 24) {
+            document.writeln(`<p> ${name} ${age}</p>`);
+        }
+
+        defaultValue("Refsi"); // tidak memberikan value parameter age
+        defaultValue("Refsi", 30); // memberikan value parameter age
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For In</title>
+</head>
+
+<body>
+
+    <h1>For In Javascript:</h1>
+
+    <script>
+        // for in untuk array
+        document.writeln("---------For in Array---------")
+        const name = ["Refsi", "Maulana", "Siregar"];
+
+        for (const index in name) {
+            document.writeln(`<p> Index ke ${index} = ${name[index]} </p>`);
+        };
+
+        // bisa menggunakan foreach()
+        document.writeln("---------ForEach Array---------")
+        let text = name.forEach(function myFunc(value, index) {
+            document.write(`<p> ${index} = ${value} </p>`)
+        });
+
+
+        // for in untuk object
+        const dataName = {
+            firstName: "Eko",
+            middleName: "Kurniawan",
+            lastName: "Khannedy"
+        };
+
+        document.writeln("---------For in Object---------")
+        for (const property in dataName) {
+            document.writeln(`<p> ${property} : ${dataName[property]} </p>`);
+        }
+
+
+    </script>
+
+</body>
+
+</html>

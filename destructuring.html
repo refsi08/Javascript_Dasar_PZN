@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+
+<body>
+
+    <h1>Destructuring Javascript:</h1>
+    <p>Mengacak-acak value dari array atau object agar bisa diambil satu persatu nilainya</p>
+
+    <script>
+        // contoh mengambil nilai array cara biasa
+
+        // create array
+        const names = ["Refsi", "Maulana", "Siregar"];
+
+        // call value array
+        document.writeln(`<p> ${names[0]} </p>`);
+        document.writeln(`<p> ${names[1]} </p>`);
+        document.writeln(`<p> ${names[2]} </p>`);
+
+        // mengambil menggunakan destructuring array
+        const [namaAwal, namaTengah, namaAkhir = "namaku akir", ...lainnya] = names;
+
+        document.writeln(namaAwal);
+        document.writeln(namaTengah);
+        document.writeln(namaAkhir);
+
+    </script>
+
+    <script>
+        // contoh mengambil nilai object dengan cara biasa
+
+        // create object
+        const person = {
+            firstName: "Eko",
+            lastName: "Khannedy",
+            address: {
+                street: "Jalanin aja dulu",
+                city: "Jakarta",
+                country: "Indonesia"
+            },
+            hobby: "Game",
+            channel: "Programmer Zaman Now"
+        };
+
+        // call object property
+        document.writeln(`<p>${person.firstName}</p>`);
+        document.writeln(`<p>${person.lastName}</p>`);
+        document.writeln(`<p>${person.address.country}</p>`);
+
+        // call object value menggunakan destructuring 
+        const { firstName, lastName, address: { street, city, country }, ...others } = person;
+        document.writeln(`<p> ${firstName} </p>`);
+        document.writeln(`<p> ${lastName} </p>`);
+        document.writeln(`<p> ${street} </p>`);
+        document.writeln(`<p> ${city} </p>`);
+        document.writeln(`<p> ${country} </p>`);
+        document.writeln(`<p> ${others} </p>`);
+
+    </script>
+
+
+    <!-- destructuring dalam function parameter -->
+    <script>
+        // create function
+        function displayPerson({ firstName, middleName, lastName }) {
+            document.writeln(`<p> ${firstName} </p>`);
+            document.writeln(`<p> ${middleName} </p>`);
+            document.writeln(`<p> ${lastName} </p>`);
+        }
+
+        // create object
+        const person2 = {
+            firstName: "Eko",
+            middleName: "Kurniawan",
+            lastName: "Siregar"
+        };
+
+        displayPerson(person2);
+
+
+        // contoh function destructuring data array
+        function sumArray([number1, number2]) {
+            return number1 + number2;
+        }
+
+        // call array
+        document.writeln(sumArray([1, 2]));
+        document.writeln(sumArray([2, 2]));
+    </script>
+
+
+
+</body>
+
+</html>

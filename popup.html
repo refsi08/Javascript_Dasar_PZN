@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Popup</title>
+</head>
+
+<body>
+
+    <h1>Javascript Popup : </h1>
+
+    <!-- alert -->
+    <script>
+        alert("welcome to Javascript Dasar");
+    </script>
+
+    <!-- alert prompt -->
+    <script>
+        let name = prompt("Input nama anda : ");
+        alert(`Hello ${name}`);
+    </script>
+
+    <!-- alert confirm -->
+    <script>
+        const masuk = confirm("Yakin ingin masuk ?");
+
+        if (masuk) {
+            const permintaan = prompt("apa yang anda inginkan?");
+            if (permintaan) {
+                alert("Please Wait!");
+            }
+        } else {
+            alert("Bye Bye");
+        }
+    </script>
+</body>
+
+</html>

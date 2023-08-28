@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Dasar</title>
+</head>
+
+<body>
+
+    <h2>Tipe Data Object : </h2>
+
+    <!-- Tipe Data Object -->
+    <script>
+        const person = {
+            nama: "Refsi Maulana",
+            alamat: "Jakarta",
+            negara: "Indonesia"
+        };
+
+        // ubag property method / attribute
+        person["noHp"] = '+62852 6751 6715';
+
+        // menghapus property
+        delete person["noHp"];
+
+        // menampilkan isi dari object
+        document.write(`Nama    : ${person.nama} <br>`);
+        document.write(`Alamat  : ${person.alamat} <br>`);
+        document.write(`Negara  : ${person.negara} <br>`);
+        document.write(`No.Hp   : ${person.noHp} <br>`);
+    </script>
+</body>
+
+</html>

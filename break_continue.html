@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break & Continue</title>
+</head>
+
+<body>
+
+    <h1>Break and Continue:</h1>
+
+    <h3>Perulangan Break :</h3>
+
+    <!-- perulangan break -->
+    <script>
+        let angka = 1;
+
+        while (true) {
+            document.writeln(`<p> Perulangan Break ke ${angka} </p>`);
+            angka++;
+            if (angka >= 11) {
+                break;
+            }
+        }
+    </script>
+
+    <h3>Perulangan Continue :</h3>
+
+    <!-- perulangan continue -->
+    <script>
+        for (let number = 1; number <= 20; number++) {
+            if (number % 2 == 1) {
+                continue;
+            }
+            document.writeln(`<p> Perulangan Continue ke ${number}</p>`);
+        }
+    </script>
+</body>
+
+</html>

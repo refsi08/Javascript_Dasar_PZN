@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Null Coalescing</title>
+</head>
+
+<body>
+
+    <h1>Null Coalescing : </h1>
+    <p>null Coalescing adalah mengecek value parameter kosong atau tidak
+        dan apabila kosong maka akan di isi nilai value nya
+    </p>
+
+    <script>
+        // cara cek menggunakan if
+        let parameter;
+        let data = parameter;
+        if (data === undefined || data === null) {
+            data = "Nilai Default";
+        }
+        document.writeln(data);
+    </script>
+
+    <!-- cara menggunakan null coalescing -->
+    <!-- lebih mudah dan menggunakan simbol ?? -->
+    <script>
+        let coalescing;
+        let result = coalescing ?? "Niai Default";
+        document.writeln(`<p> ${result} </p>`);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure Javascript</title>
+</head>
+
+<body>
+
+    <h1>Closure Javascript:</h1>
+
+    <script>
+        function init(valueA) {
+            let nama = "Shandika";
+
+            function tampilNama(valueB) {
+                document.writeln(nama);
+                return valueA + valueB;
+
+            }
+            return tampilNama;
+        }
+
+        const panggilNama = init(10);
+        document.writeln(panggilNama(10));
+    </script>
+
+    <!-- contoh dari dicoding -->
+    <script>
+        // contoh 1
+        function init() {
+            const name = "Obi Wan";
+
+            function greet() {
+                console.log(`Hello ${name}`);
+            }
+
+            greet();
+        };
+
+        init();
+
+    </script>
+    <script>
+        // contoh 2
+        function init() {
+            const name = "Refsi Maulana";
+
+            function greet() {
+                console.log(`Hello ${name}`);
+            }
+
+            return greet;
+        }
+
+        const myFunction = init();
+        myFunction();
+    </script>
+</body>
+
+</html>

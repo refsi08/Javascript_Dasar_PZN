@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Undefined</title>
+</head>
+
+<body>
+
+    <h1>Javascript Undefined :</h1>
+
+    <!-- Undefined -->
+    <script>
+        let name;
+
+        if (name === undefined) {
+            console.info("Undefined");
+        } else {
+            console.info("Defined");
+        }
+    </script>
+
+    <!-- Undefined Array Value -->
+    <script>
+        const names = ["Refsi", "Maulana"];
+
+        if (names[1] === undefined) {
+            alert("Hello World!")
+        } else {
+            alert(`Hello ${names[1]}`)
+        }
+    </script>
+
+    <!-- Undefined Object Property  -->
+    <script>
+        let person = {
+            name: "Refsi Maulana Siregar",
+            jenisKelamin: undefined
+        };
+
+        if (person.name === undefined) {
+            console.log("Hello Javascript!");
+        } else {
+            console.log(`Hello ${person.name}`);
+        }
+    </script>
+</body>
+
+</html>

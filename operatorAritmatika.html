@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Dasar</title>
+    <script src="js/style.js"></script>
+</head>
+
+
+<body>
+    <h2>Aplikasi Sederhana Operator Aritmatika :</h2>
+    <button type="button" onclick="Penjumlahan()">Penjumlahan</button>
+    <button type="button" onclick="Pengurangan()">Pengurangan</button>
+    <button type="button" onclick="Perkalian()">Perkalian</button>
+    <h4 id="penjumlahan"></h4>
+    <h6 id="pengurangan"></h6>
+    <h6 id="perkalian"></h6>
+
+    <script>
+        function Penjumlahan() {
+            let result = 1 + 2;
+            document.getElementById("penjumlahan").innerHTML = "1 + 2 = " + result;
+        }
+
+        function Pengurangan() {
+            let result = 3 - 1;
+            document.getElementById("penjumlahan").innerHTML = "3 - 1 = " + result;
+        }
+
+        function Perkalian() {
+            let result = 2 * 2;
+            document.getElementById("penjumlahan").innerHTML = "2 * 2 = " + result;
+        }
+    </script>
+
+    <script>
+        let result = 1 + 2;
+        document.writeln("<p> 1 + 2 = " + result + "</p>");
+
+        let originalResult = result;
+        result -= 1;
+        document.writeln("<p>" + originalResult + " - 1 = " + result);
+
+        originalResult = result;
+        result *= 2;
+        document.writeln("<p>" + originalResult + " * 2 = " + result);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator IN</title>
+</head>
+
+<body>
+
+    <h1>Operator In</h1>
+    <p>** mengecek apa data property ada atau tidak</p>
+
+    <script>
+        // cek properti yang ada data nya
+        const person = {
+            firstName: "Refsi",
+            lastName: "Siregar"
+        };
+
+        if ("firstName" in person) {
+            document.writeln(`Hello ${person.firstName}`);
+        } else {
+            document.writeln(`Hello`);
+        }
+
+        // cek properti yang data nya undefined
+        const student = {
+            firstName: "Eko",
+            middleName: undefined,
+            lastName: "Khannedy"
+        };
+
+        if ("middleName" in student) {
+            document.writeln(`Hello ${student.middleName}`);
+        } else {
+            document.writeln(`Hello Student`);
+        }
+
+        // cek properti yang data nya null
+        const names = [null, "Kurniawan", null];
+        const result = 0 in names;
+        document.writeln(result);
+    </script>
+</body>
+
+</html>

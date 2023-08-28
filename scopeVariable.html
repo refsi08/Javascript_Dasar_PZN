@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variabel Scope</title>
+</head>
+
+<body>
+
+    <h1>Variable Scope:</h1>
+
+    <script>
+        // global scope variable
+
+        let counter = 0;
+        function hitMe() {
+            // disini local scope variable hitMe()
+            let globalVariabel = "First";
+            // perulangan variabel global counter masih bisa diakses
+            while (counter <= 10) {
+                document.writeln(`<p> ${counter} </p>`);
+                counter++;
+            }
+
+            // akses variabel global
+            document.writeln(`<p> ${globalVariabel} </p>`);
+        }
+
+        // call function
+        hitMe();
+        // console.log(hitMe(globalVariabel)); // ERROR (variabel local)
+
+
+
+        // Nested Function
+        function first() {
+            let variabelFirst = "Variabel first";
+
+            // function iner funciton
+            function second() {
+                console.log(variabelFirst);
+            }
+            second();
+        }
+
+        first();
+
+    </script>
+
+</body>
+
+</html>

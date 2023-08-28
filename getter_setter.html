@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getter & Setter</title>
+</head>
+
+<body>
+
+    <h1> Getter dan Setter Javascript:</h1>
+
+    <script>
+
+        // create object
+        const person = {
+            firstName: "Eko",
+            middleName: "Kurniawan",
+            lastName: "Khannedy",
+
+            // mengambil data (Get)
+            get fullName() {
+                return `${this.firstName} ${this.middleName} ${this.lastName}`;
+            },
+
+            set fullName(value) {
+                const dataArray = value.split(" ");
+                this.firstName = dataArray[0];
+                this.middleName = dataArray[1];
+                this.lastName = dataArray[2];
+            }
+        };
+
+        // change property firstname cara biasa
+        person.firstName = "Eko";
+        person.lastName = "Khanneedy";
+
+        // change menggunakan setter
+        person.fullName = "Refsi Maulana Siregar";
+
+        // call get fullname
+        document.writeln(person.fullName);
+
+
+    </script>
+</body>
+
+</html>

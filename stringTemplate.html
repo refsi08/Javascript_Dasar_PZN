@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Dasar</title>
+</head>
+
+<body>
+
+    <script>
+        const name = `Refsi Maulana Siregar`;
+        const firstName = `Refsi`;
+        const middleName = `Maulana`;
+        const lastName = `Siregar`;
+
+        // cara baru interpolaton
+        const template = `Name : ${firstName} ${middleName} ${lastName} <br>`;
+
+        // cara lama 
+        const lama = "Nama : " + firstName + middleName + lastName + "<br>";
+        document.writeln(template);
+        document.writeln(lama);
+
+        // string multiline
+        const multiline = `Nama Saya Refsi Maulana Siregar,
+Bekerja sebagai programmer sejak 2022`;
+
+        // menggunakan tag <pre>
+        document.writeln("<pre>");
+        document.writeln(multiline);
+        document.writeln("</pre>");
+
+    </script>
+</body>
+
+</html>

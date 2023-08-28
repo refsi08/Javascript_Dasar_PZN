@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursive Function</title>
+</head>
+
+<body>
+
+    <h1>Recursive Function:</h1>
+    <p>*memanggil function dirinya sendiri</p>
+
+    <h2>contoh menghitung bilangan factorial:</h2>
+
+    <script>
+        // menggunakan for biasa
+        function factorial(value) {
+            let result = 1;
+            for (let index = 1; index <= value; index++) {
+                result = result * index;
+            }
+
+            console.log(result);
+        }
+
+        factorial(6);
+        console.log(1 * 2 * 3 * 4 * 5 * 6); //contoh hitung manual
+
+
+        // factorial menggunakan recursive function
+        function factorialRecursive(value) {
+            if (value === 1) {
+                return 1;
+            } else {
+                return value * factorialRecursive(value - 1);
+            }
+        }
+
+        console.log(factorialRecursive(7));
+        console.log(7 * 6 * 5 * 4 * 3 * 2 * 1);
+
+
+        // menghitung perulangan biasa menggunakan recursive function
+        function hitungMundur(value) {
+            console.log(value);
+            if (value <= 0) {
+                return 0;
+            } else {
+                return hitungMundur(value - 1);
+            }
+        }
+
+        hitungMundur(10);
+    </script>
+
+</body>
+
+</html>

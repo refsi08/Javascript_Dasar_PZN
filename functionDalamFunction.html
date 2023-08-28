@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner Funciton</title>
+</head>
+
+<body>
+
+    <h1>Function di dalam Function (inner Funciton)</h1>
+
+    <p>function bisa dibuat di dalam function, tetapi hanya bisa di akses di dalam function scope ny saja , tidak bisa
+        di akses diluar function
+    </p>
+
+    <script>
+        // contoh inner function
+        function outer() {
+
+            function inner() {
+                document.writeln("<p>Hello Javascript!</p>");
+            }
+            inner();
+            inner();
+            inner();
+            inner();
+            inner();
+        }
+
+        outer();
+        inner(); // function is not defined
+
+
+    </script>
+
+
+
+</body>
+
+</html>

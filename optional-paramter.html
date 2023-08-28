@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optional Parameter</title>
+</head>
+
+<body>
+
+    <h1>Optional parameter:</h1>
+    <p>Optional Paramter adalaha apabila kita memberika parameter ke function boleh digunakan atau tidak dan akan
+        bernilai undefined</p>
+
+    <!-- example -->
+    <script>
+        function fullName(firstName, middleName, lastName) {
+            document.writeln(`<P> ${firstName} ${middleName} ${lastName} </p>`);
+        }
+
+        fullName("Refsi"); // hanya memberikan 1/3 nilai parameter
+        fullName("Refsi", "Maulana"); // hanya memberikan 2/3 nilai parameter
+        fullName("Refsi", "Maulana", "Siregar"); // memberikan 3/3 nilai parameter
+
+    </script>
+</body>
+
+</html>

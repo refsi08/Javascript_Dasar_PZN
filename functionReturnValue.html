@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function return value</title>
+</head>
+
+<body>
+
+    <h1>Function Return Value:</h1>
+
+    <script>
+        document.write("<p>----- Function return Value ------  </p>");
+        // function return value
+        function returnValue(firstName, lastName) {
+            return `Hello ${firstName} ${lastName}`;
+        }
+
+        // call function return value
+        document.writeln(returnValue("Refsi", "Maulana"));
+
+        // function return value lebih dari satu
+        document.write("<p>----- Function return Value lebih dari 1 return ------  </p>");
+
+        function getFinalScrore(value) {
+            if (value > 90) {
+                return "A";
+            } else if (value > 80) {
+                return "B";
+            } else if (value > 70) {
+                return "C";
+            } else if (value > 60) {
+                return "D";
+            }
+            else {
+                return "E";
+
+            }
+        }
+
+        // call function return value lebih dari 1
+        const result = getFinalScrore(81);
+        document.writeln(`<p> Nilai Ujian Kamu <b> ${result} </b></p>`);
+
+
+        // Menghentikan eksekusi return value
+        document.write("<p>----- Menghentikan eksekusi return value ------  </p>");
+        document.write("<p> Mencari data Array [1, 2, 3, 4, 5, 6, 7]  </p>");
+
+        function isContains(array, searchValue) {
+            for (const element of array) {
+                if (element === searchValue) {
+                    return "<b>Data ditemukan</b>";
+                }
+            }
+            return "<b>Data tidak ditemukan</b>";
+        }
+
+        const nilaiArray = [1, 2, 3, 4, 5, 6, 7];
+        const searchAngka = 2;
+        const index = nilaiArray.indexOf(searchAngka); // mencari data di index ke berapa
+        const hasil = isContains(nilaiArray, searchAngka);
+
+        document.writeln(`${hasil} dan berada di index ke <b>${index}</b>`);
+
+        // contoh function mencari nilai ujian
+        function mencariAngka(nilaiUjian, searchNilai) {
+            for (const element of nilaiUjian) {
+                if (element === searchNilai) {
+                    return "Lulus";
+                }
+            }
+            return "Tidak Lulus";
+        }
+        const nilai = [60, 70, 80, 90, 100, 20];
+        const angka = 70;
+        document.writeln(`<p>${mencariAngka(nilai, angka)}</p>`);
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Of</title>
+</head>
+
+<body>
+
+    <h1>Javascript For Of:</h1>
+    <p>for of berbeda dengan for in, for of mengambil nilai value dari array atau string. tidak bisa untuk objek
+        dikarenakan object buka tipe data iterable.</p>
+
+    <script>
+        // for in untuk array
+        const names = ["Refsi", "Maulana", "Siregar"];
+
+        document.writeln("<p>--------For of untuk Array------- </p>")
+        for (const name of names) {
+            document.writeln(`<p> ${name} </p>`);
+        }
+
+
+        // for in untuk array
+        const fullName = "Refsi Maulana";
+
+        document.writeln("<p>--------For of untuk String------- </p>")
+        for (const character of fullName) {
+            document.writeln(`<p> ${character} </p>`);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optional Chaining</title>
+</head>
+
+<body>
+
+    <h1>Optional Chaining</h1>
+    <!-- optional chaining menggunakan simbol ? -->
+    <p>** untuk mengecek apakah datanya ada atau tidak</p>
+
+    <script>
+        const person = {
+            addres: {
+                country: {
+                    provinci: "Jambi"
+                }
+            }
+        };
+
+        // jika mau ngecek data kosong atau tidak bisa dikasih tanda tanya
+        let data = person?.addres?.country.provinci;
+
+        document.writeln(data);
+    </script>
+</body>
+
+</html>

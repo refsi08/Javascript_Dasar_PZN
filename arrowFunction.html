@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+
+<body>
+    <h1>Arrow Function :</h1>
+
+    <script>
+        // contoh 1
+        const sayHello = (name) => {
+            console.log(`Hello ${name}`);
+        }
+
+        sayHello("Refsi");
+
+        // contoh 2
+        // membuat arrow function menjadi sebaris
+        const sayHello2 = (name) => console.log(`Hello ${name}`);
+
+        sayHello2("Refsi2");
+
+        // contoh 3
+        // membuat arrow function sebaris lebih ringkas lagi parameter jika cuman satu bisa tanpa tanda kurung
+        const sayHello3 = name => console.log(`Hello ${name}`);
+
+        sayHello3("Refsi3");
+
+        // contoh 4
+        // arrow function mengembalikan nilai value (return)
+        const sum = (number1, number2) => number1 + number2;
+
+        console.log(sum(10, 20));
+
+        // contoh 5
+        // Arrow function sebagai parameter
+        function giveMeName(callback) {
+            callback("Refsi4");
+        }
+
+        giveMeName((name) => console.log(`Hello ${name}`));
+
+
+    </script>
+</body>
+
+</html>

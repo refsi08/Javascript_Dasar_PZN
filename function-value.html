@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function value</title>
+</head>
+
+<body>
+
+    <h1>Function Sebagai Value :</h1>
+
+    <p>**Function bisa sebagai value</p>
+
+    <script>
+        function sayHello(name) {
+            document.writeln(`<p> Hello ${name}</p>`);
+        }
+
+        // menjadikan function sebagai value dari variabel
+        const say = sayHello;
+        say("EKo");
+
+
+        // callback function
+        function giveMeName(callback) {
+            callback('EKO calback');
+        }
+
+        giveMeName(say);
+    </script>
+
+</body>
+
+</html>

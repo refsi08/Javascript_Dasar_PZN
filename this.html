@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Javascript</title>
+</head>
+
+<body>
+
+    <h1>Javascript kata kunci this:</h1>
+
+    <script>
+        // this milik global
+        document.writeln(this);
+
+        // this milik function
+        function myFunction() {
+            document.writeln(this);
+            // this milik inner function
+            function inner() {
+                document.writeln(this);
+            }
+            return inner();
+        }
+
+        myFunction();
+
+
+        // this milik object method
+        // this nya milik si object
+        const person = {
+            nama: "Refsi",
+            sayHello: function (nama) {
+                document.writeln(`Hello ${this.nama} perkenalkan ini ${nama}`);
+            }
+        }
+
+        // note: untuk object method tidak bisa menggunakan this apabila menggunakan arrow function
+
+        person.sayHello("Khannedy");
+    </script>
+</body>
+
+</html>

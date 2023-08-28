@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Method</title>
+</head>
+
+<body>
+
+    <h1>Object Method :</h1>
+    <p>object method adalah sebuah funtion yang ada di dalam object</p>
+
+    <!-- example -->
+    <script>
+
+        const person = {
+            nama: "Refsi",
+            sayHello: (name) => document.writeln(`<p> Hello ${name} </p>`), // menggunakan arrow function
+        }
+
+        // memanggil isi property object
+        document.writeln(person.nama);
+
+        // memanggil isi function dalam object
+        person.sayHello("Refsi");
+
+
+        // contoh ke 2 menambahkan function ke object
+
+        const person2 = {
+            nama: "Refsi 2",
+        }
+
+        // function baru
+        person.sayHello2 = (name) => document.writeln(`<p> Hello ${name} </p>`); // mengunakan arrow function
+
+        document.writeln(person2.nama);
+
+        person.sayHello2("Refsi2");
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
